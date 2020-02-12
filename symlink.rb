@@ -4,6 +4,7 @@ FILES = %w(eula.txt server.properties latest.jar server-icon.png start.sh restar
 
 puts('=== Creating symlinks ===')
 	FILES.each do |file|
+		puts('» Creating symlink for ' + file) 
 		system('ln -s ' + REPO_DIR + file + ' ' + SERVER_DIR)
   end
 puts('=== Created symlinks ===')
